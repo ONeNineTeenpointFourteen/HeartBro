@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Starry background */
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1; /* Send stars behind the main content */
+    overflow: hidden;
+}
+
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send particles behind content */
+}
+
+/* Center content styling */
+.container {
+    text-align: center;
+    z-index: 1; /* Keep content above the stars */
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4500;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff6347;
+}
+
+
+/* Particle properties */
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: particleMove 10s linear infinite;
+}
+
+/* Particle movement in random directions */
+@keyframes particleMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(calc(100vw * var(--xDir)), calc(100vh * var(--yDir)));
+    }
+}

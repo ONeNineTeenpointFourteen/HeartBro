@@ -1,0 +1,87 @@
+
+
+/* Notification overlay */
+ .notification {
+    position: fixed;
+    font-family: cursive;
+    font-weight: bold;
+    width: 300px;
+    height: 100px;
+    background: rgba(243, 0, 0);
+    display: flergba(189, 107, 0);
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Notification overlay */
+
+.notification p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.notification button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4500;
+    color: white;
+    cursor: pointer;
+}
+
+.notification button:hover {
+    background-color: #ff6347;
+}
+
+/* Main content styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1; /* Keep content above the notification */
+}
+
+img {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    border: 3px solid white;
+    border-radius: 10px;
+    animation: none; /* Initially no animation */
+    transform-origin: center; /* Scale from the center */
+}
+
+/* Styling for the birthday message */
+h2 {
+    font-size: 2rem;
+    color: white;
+    margin-top: 20px; /* Add some space between the GIF and the text */
+}
+
+/* Bouncy animation for the GIF (scale animation) */
+@keyframes bounce-scale {
+    0%, 100% {
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        transform: scale(1.2); /* Scale up by 20% */
+    }
+}

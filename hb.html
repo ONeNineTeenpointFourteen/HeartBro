@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="hb-style.css">
+</head>
+<body>
+    <!-- Notification overlay -->
+    <div class="notification" id="notification">
+        <p id="notificationText">happy birthday Bodda!!
+            ekhn ok click koro then gif ta click koro.
+        </p>
+        <button id="okButton">OK</button>
+    </div>
+
+    <!-- Main content -->
+    <div class="container">
+        <img src="hB.gif" alt="Happy Birthday GIF" id="birthdayGif" onclick="playSong()">
+       
+    </div>
+
+    <!-- Audio element for the song -->
+    <audio id="birthdaySong" src="song.mp3" preload="auto"></audio>
+
+    <script src="hb-script.js"></script>
+</body>
+</html>
